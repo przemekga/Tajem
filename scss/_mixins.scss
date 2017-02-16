@@ -1,0 +1,49 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin bp($point) {
+  @if $point == XXL {
+    @media (min-width: 1600px) { @content; }
+  }
+  @else if $point == XL {
+    @media (max-width: 1200px) { @content; }
+  }
+  @else if $point == L {
+    @media (max-width: 960px) { @content; }
+  }
+  @else if $point == M {
+    @media (max-width: 850px) { @content; }
+  }
+  @else if $point == S {
+    @media (max-width: 710px) { @content; }
+  }
+  @else if $point == XS {
+    @media (max-width: 650px) { @content; }
+  }
+  @else if $point == XXS {
+    @media (max-width: 400px) { @content; }
+  }
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin vertical-align($percentage) {
+  position: relative;
+  top: $percentage;
+  -webkit-transform: translateY(-$percentage);
+  -ms-transform: translateY(-$percentage);
+  transform: translateY(-$percentage);
+}

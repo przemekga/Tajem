@@ -1,0 +1,65 @@
+header {
+  height: 74.44vh;
+  width: 100%;
+  background: url("../images/bg-slide.jpg") no-repeat center;
+  background-size: cover;
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-family: "Roboto thin";
+    color: #02dfd0;
+    margin-left: calculateRem(10px);
+
+    img {
+      margin-right: calculateRem(11px);
+    }
+  }
+
+  nav {
+
+    float: right;
+    margin-right: calculateRem(10px);
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        font-family: "Roboto Black";
+        font-size: calculateRem(13px);
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-left: calculateRem(25px);
+      }
+    }
+  }
+
+  .slider {
+    @include vertical-align(25%);
+
+
+    .slider-track {
+      text-align: center;
+
+      .slide {
+        color: #fff;
+
+        h1 {
+
+        }
+
+        p {
+          font-family: "Roboto Light";
+          font-size: calculateRem(14px);
+          color: #e3e2e8;
+        }
+      }
+    }
+  }
+}
