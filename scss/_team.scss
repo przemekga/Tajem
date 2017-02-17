@@ -1,0 +1,64 @@
+.team {
+  height:calculateRem(715px);
+  background-image: url("../images/teambg.jpg");
+  background-size: cover;
+
+  .team-text {
+    text-align: center;
+    margin-top: calculateRem(70px);
+
+    h1 {
+      @include heading-styling($team-h1-color);
+      letter-spacing: 2px;
+    }
+
+    p {
+      @include paragraph-styling($team-p-color);
+    }
+
+    div {
+      @include makeSeparator(50px, 2px, #655b80);
+    }
+  }
+
+  .member {
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    div {
+      border: 1px solid #78778c;
+      margin-top: -6px;
+    }
+
+    h4 {
+      @include item-title($team-member-name, 14px);
+      margin-bottom: 0;
+      margin-top: calculateRem(15px);
+
+      letter-spacing: 1px;
+    }
+    p {
+      @include item-desc($team-member-desc, 13px);
+      text-transform: uppercase;
+      margin-top: calculateRem(4px);
+      margin-bottom: calculateRem(20px);
+    }
+  }
+
+ .hire {
+   text-align: center;
+
+   p {
+     @include item-desc(#f3f3f3, 14px);
+   }
+
+   button {
+     @include makeButton(#00e0d0);
+     width: calculateRem(138px);
+   }
+ }
+}

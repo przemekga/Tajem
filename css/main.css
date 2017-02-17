@@ -1,6 +1,14 @@
 body {
   margin: 0; }
 
+.row, .container, .container-fluid {
+  *zoom: 1; }
+  .row:before, .container:before, .container-fluid:before, .row:after, .container:after, .container-fluid:after {
+    content: " ";
+    display: table; }
+  .row:after, .container:after, .container-fluid:after {
+    clear: both; }
+
 @font-face {
   font-family: 'Roboto thin';
   src: url(../fonts/Roboto-Thin.ttf);
@@ -16,6 +24,24 @@ body {
 @font-face {
   font-family: 'Roboto Light';
   src: url(../fonts/Roboto-Light.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Hammersmith One';
+  src: url(../fonts/HammersmithOne.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Playfair Display Bold';
+  src: url(../fonts/PlayfairDisplay-Bold.otf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Playfair Display Regular';
+  src: url(../fonts/PlayfairDisplay-Regular.otf);
   font-weight: normal;
   font-style: normal; }
 
@@ -95,7 +121,8 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   margin: 0;
-  float: left; }
+  float: left;
+  box-sizing: border-box; }
 
 .row {
   width: 100%;
@@ -112,7 +139,7 @@ body {
   width: 100%; }
 
 header {
-  height: 74.44vh;
+  height: 41.875rem;
   width: 100%;
   background: url("../images/bg-slide.jpg") no-repeat center;
   background-size: cover; }
@@ -135,22 +162,210 @@ header {
       list-style: none; }
       header nav ul li {
         display: inline-block;
-        font-family: "Roboto Black";
-        font-size: 0.8125rem;
-        color: #ffffff;
-        text-transform: uppercase;
         margin-left: 1.5625rem; }
+        header nav ul li a {
+          font-family: "Roboto Black";
+          font-size: 0.8125rem;
+          color: #ffffff;
+          text-transform: uppercase;
+          text-decoration: none; }
   header .slider {
     position: relative;
-    top: 25%;
-    -webkit-transform: translateY(-25%);
-    -ms-transform: translateY(-25%);
-    transform: translateY(-25%); }
+    top: 20%;
+    -webkit-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%); }
     header .slider .slider-track {
       text-align: center; }
       header .slider .slider-track .slide {
         color: #fff; }
+        header .slider .slider-track .slide h1 {
+          margin-bottom: 0; }
+        header .slider .slider-track .slide .separator {
+          height: 0.0625rem;
+          width: 3.125rem;
+          background-color: #00e0d0;
+          margin: 0 auto;
+          margin-bottom: 1.75rem;
+          margin-top: 1.3125rem; }
         header .slider .slider-track .slide p {
           font-family: "Roboto Light";
           font-size: 0.875rem;
-          color: #e3e2e8; }
+          color: #e3e2e8;
+          margin-top: 0;
+          line-height: 1.625rem; }
+        header .slider .slider-track .slide button {
+          font-family: "Hammersmith One";
+          background-color: transparent;
+          text-transform: uppercase;
+          color: #00e0d0;
+          border: 1px solid #00e0d0;
+          border-radius: 2px;
+          height: 2.375rem;
+          width: 7.375rem;
+          padding: 0 14px;
+          margin-top: 3.3125rem;
+          cursor: pointer; }
+
+.our-story {
+  height: 25.1875rem;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center; }
+  .our-story .big-logo {
+    text-align: center; }
+  .our-story .our-story-article h3 {
+    margin: 0;
+    font-family: "Playfair Display Bold";
+    font-size: 1.375rem;
+    text-transform: uppercase;
+    color: #413d4b; }
+  .our-story .our-story-article p {
+    font-family: "Roboto Light";
+    font-size: 0.875rem;
+    color: #716e78; }
+  .our-story .our-story-article button {
+    font-family: "Hammersmith One";
+    background-color: transparent;
+    text-transform: uppercase;
+    color: #00e0d0;
+    border: 1px solid #00e0d0;
+    border-radius: 2px;
+    height: 2.375rem;
+    width: 7.375rem;
+    padding: 0 14px;
+    margin-top: 3.3125rem;
+    cursor: pointer; }
+
+.video {
+  height: 34.5rem;
+  background-image: url("../images/ourstory.jpg");
+  background-size: cover; }
+  .video .video-link {
+    margin: 0 auto;
+    width: 10rem;
+    display: block;
+    font-family: "Roboto Black";
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.expertise {
+  background-color: #ffffff;
+  padding-bottom: 4.25rem; }
+  .expertise .expertise-text {
+    text-align: center;
+    margin-top: 4.375rem; }
+    .expertise .expertise-text h1 {
+      font-family: "Playfair Display Bold";
+      font-size: 1.375rem;
+      text-transform: uppercase;
+      color: #413d4b;
+      margin-bottom: 0; }
+    .expertise .expertise-text p {
+      font-family: "Playfair Display Regular";
+      font-size: 0.875rem;
+      color: #716e78;
+      margin-top: 8px; }
+    .expertise .expertise-text div {
+      height: 0.0625rem;
+      width: 3.125rem;
+      background-color: #00e0d0;
+      margin: 0 auto;
+      margin-bottom: 1.75rem;
+      margin-top: 1.3125rem; }
+  .expertise .skill {
+    text-align: center;
+    height: 15.5625rem;
+    border-bottom: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    padding-top: 2rem; }
+    .expertise .skill:nth-of-type(3n) {
+      border-right: none; }
+    .expertise .skill:nth-of-type(n + 4) {
+      border-bottom: none; }
+    .expertise .skill h4 {
+      font-family: "Roboto Black";
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      color: #413d4b; }
+    .expertise .skill p {
+      font-family: "Roboto Light";
+      font-size: 0.875rem;
+      color: #716e78; }
+
+.team {
+  height: 44.6875rem;
+  background-image: url("../images/teambg.jpg");
+  background-size: cover; }
+  .team .team-text {
+    text-align: center;
+    margin-top: 4.375rem; }
+    .team .team-text h1 {
+      font-family: "Playfair Display Bold";
+      font-size: 1.375rem;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0;
+      letter-spacing: 2px; }
+    .team .team-text p {
+      font-family: "Playfair Display Regular";
+      font-size: 0.875rem;
+      color: #e0dee4;
+      margin-top: 8px; }
+    .team .team-text div {
+      height: 0.125rem;
+      width: 3.125rem;
+      background-color: #655b80;
+      margin: 0 auto;
+      margin-bottom: 1.75rem;
+      margin-top: 1.3125rem; }
+  .team .member {
+    text-align: center; }
+    .team .member img {
+      width: 100%;
+      height: auto; }
+    .team .member div {
+      border: 1px solid #78778c;
+      margin-top: -6px; }
+    .team .member h4 {
+      font-family: "Roboto Black";
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      color: #f3f3f5;
+      margin-bottom: 0;
+      margin-top: 0.9375rem;
+      letter-spacing: 1px; }
+    .team .member p {
+      font-family: "Roboto Light";
+      font-size: 0.8125rem;
+      color: #9a97a9;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+      margin-bottom: 1.25rem; }
+  .team .hire {
+    text-align: center; }
+    .team .hire p {
+      font-family: "Roboto Light";
+      font-size: 0.875rem;
+      color: #f3f3f3; }
+    .team .hire button {
+      font-family: "Hammersmith One";
+      background-color: transparent;
+      text-transform: uppercase;
+      color: #00e0d0;
+      border: 1px solid #00e0d0;
+      border-radius: 2px;
+      height: 2.375rem;
+      width: 7.375rem;
+      padding: 0 14px;
+      margin-top: 3.3125rem;
+      cursor: pointer;
+      width: 8.625rem; }

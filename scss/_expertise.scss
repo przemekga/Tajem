@@ -1,0 +1,45 @@
+.expertise {
+  background-color: #ffffff;
+  padding-bottom: calculateRem(68px);
+
+  .expertise-text {
+    text-align: center;
+    margin-top: calculateRem(70px);
+
+    h1 {
+      @include heading-styling($exp-header-color);
+    }
+
+    p {
+      @include paragraph-styling($exp-paragraph-color);
+    }
+
+    div {
+      @include makeSeparator(50px, 1px, $button-color);
+    }
+  }
+
+  .skill {
+    text-align: center;
+    height: calculateRem(249px);
+    border-bottom: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    padding-top: calculateRem(32px);
+
+    &:nth-of-type(3n) {
+      border-right: none;
+    }
+
+    &:nth-of-type(n + 4) {
+      border-bottom: none;
+    }
+
+    h4 {
+      @include item-title($exp-header-color, 14px);
+    }
+
+    p {
+      @include item-desc($exp-paragraph-color, 14px);
+    }
+  }
+}

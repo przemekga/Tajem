@@ -1,0 +1,18 @@
+.video {
+  height: calculateRem(552px);
+  background-image: url('../images/ourstory.jpg');
+  background-size: cover;
+
+  .video-link {
+    margin: 0 auto;
+    width: calculateRem(160px);
+    display: block;
+    font-family: "Roboto Black";
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include vertical-align(50%);
+  }
+}

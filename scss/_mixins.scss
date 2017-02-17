@@ -3,6 +3,40 @@
   @return $remSize * 1rem;
 }
 
+@mixin makeButton($color){
+  font-family: "Hammersmith One";
+  background-color: transparent;
+  text-transform: uppercase;
+  color: $color;
+  border: 1px solid $color;
+  border-radius: 2px;
+  height: calculateRem(38px);
+  width: calculateRem(118px);
+  padding: 0 14px;
+  margin-top: calculateRem(53px);
+  cursor: pointer;
+}
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin makeSeparator($sep-width, $sep-height, $color){
+  height: calculateRem($sep-height);
+  width: calculateRem($sep-width);
+  background-color: $color;
+  margin: 0 auto;
+  margin-bottom: calculateRem(28px);
+  margin-top: calculateRem(21px);
+}
+
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);
@@ -46,4 +80,32 @@
   -webkit-transform: translateY(-$percentage);
   -ms-transform: translateY(-$percentage);
   transform: translateY(-$percentage);
+}
+
+@mixin heading-styling($color){
+  font-family: "Playfair Display Bold";
+  font-size: calculateRem(22px);
+  text-transform: uppercase;
+  color: $color;
+  margin-bottom: 0;
+}
+
+@mixin paragraph-styling($color){
+  font-family: "Playfair Display Regular";
+  font-size: calculateRem(14px);
+  color: $color;
+  margin-top: 8px;
+}
+
+@mixin item-title($color, $size){
+  font-family: "Roboto Black";
+  font-size: calculateRem($size);
+  text-transform: uppercase;
+  color: $color;
+}
+
+@mixin item-desc($color, $size) {
+  font-family: "Roboto Light";
+  font-size: calculateRem($size);
+  color: $color;
 }

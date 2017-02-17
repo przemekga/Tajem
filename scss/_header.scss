@@ -1,5 +1,6 @@
 header {
-  height: 74.44vh;
+  //height: 74.44vh;
+  height: calculateRem(670px);
   width: 100%;
   background: url("../images/bg-slide.jpg") no-repeat center;
   background-size: cover;
@@ -31,17 +32,21 @@ header {
 
       li {
         display: inline-block;
-        font-family: "Roboto Black";
-        font-size: calculateRem(13px);
-        color: #ffffff;
-        text-transform: uppercase;
         margin-left: calculateRem(25px);
+
+        a {
+          font-family: "Roboto Black";
+          font-size: calculateRem(13px);
+          color: #ffffff;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
       }
     }
   }
 
   .slider {
-    @include vertical-align(25%);
+    @include vertical-align(20%);
 
 
     .slider-track {
@@ -51,13 +56,24 @@ header {
         color: #fff;
 
         h1 {
+          margin-bottom: 0;
 
+        }
+
+        .separator {
+          @include makeSeparator(50px, 1px, $button-color);
         }
 
         p {
           font-family: "Roboto Light";
           font-size: calculateRem(14px);
           color: #e3e2e8;
+          margin-top: 0;
+          line-height: calculateRem(26px);
+        }
+
+        button {
+          @include makeButton($button-color);
         }
       }
     }

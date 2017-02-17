@@ -1,0 +1,33 @@
+.our-story {
+  //height: 44.666666vh;
+  height: calculateRem(403px);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+
+
+
+  .big-logo{
+    text-align: center;
+  }
+
+  .our-story-article {
+    h3 {
+      margin: 0;
+      font-family: "Playfair Display Bold";
+      font-size: calculateRem(22px);
+      text-transform: uppercase;
+      color: $exp-header-color;
+    }
+
+    p {
+      font-family: "Roboto Light";
+      font-size: calculateRem(14px);
+      color: $exp-paragraph-color;
+    }
+
+    button {
+      @include makeButton($button-color);
+    }
+  }
+}
