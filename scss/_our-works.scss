@@ -1,0 +1,64 @@
+.our-works {
+  height: calc((740/900) * 100vh);
+
+  .our-work-text {
+    min-height: (157px / 740px) * 100%;
+    display: flex;
+    align-items: center;
+
+    div {
+      text-align: center;
+    }
+
+    h1 {
+      font-family: "Playfair Display Bold";
+      font-size: calculateRem(22px);
+      color: #413d4b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    a {
+      font-family: "Roboto Light";
+      font-size: calculateRem(14px);
+      color: #413d4b;
+      text-decoration: none;
+
+      i {
+        margin-left: 3px;
+      }
+    }
+  }
+
+  .thumbs {
+    max-height: (400 / 740) *100%;
+
+    [class*="col-"]{
+      margin: 0;
+      padding: 0;
+      width: calc((100% / 12) * 2);
+      margin-bottom: -4px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .works-btn {
+    min-height: (180 / 740) * 100%;
+    display: flex;
+    align-items: center;
+
+    div {
+      text-align: center;
+    }
+
+    button {
+      @include makeButton(#00e0d0);
+      width: calculateRem(140px);
+      margin: 0;
+    }
+  }
+}

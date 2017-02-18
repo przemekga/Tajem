@@ -369,3 +369,60 @@ header {
       margin-top: 3.3125rem;
       cursor: pointer;
       width: 8.625rem; }
+
+.our-works {
+  height: calc((740/900) * 100vh); }
+  .our-works .our-work-text {
+    min-height: 21.21622%;
+    display: flex;
+    align-items: center; }
+    .our-works .our-work-text div {
+      text-align: center; }
+    .our-works .our-work-text h1 {
+      font-family: "Playfair Display Bold";
+      font-size: 1.375rem;
+      color: #413d4b;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+    .our-works .our-work-text a {
+      font-family: "Roboto Light";
+      font-size: 0.875rem;
+      color: #413d4b;
+      text-decoration: none; }
+      .our-works .our-work-text a i {
+        margin-left: 3px; }
+  .our-works .thumbs {
+    max-height: 54.05405%; }
+    .our-works .thumbs [class*="col-"] {
+      margin: 0;
+      padding: 0;
+      width: calc((100% / 12) * 2);
+      margin-bottom: -4px; }
+    .our-works .thumbs img {
+      width: 100%;
+      height: auto; }
+  .our-works .works-btn {
+    min-height: 24.32432%;
+    display: flex;
+    align-items: center; }
+    .our-works .works-btn div {
+      text-align: center; }
+    .our-works .works-btn button {
+      font-family: "Hammersmith One";
+      background-color: transparent;
+      text-transform: uppercase;
+      color: #00e0d0;
+      border: 1px solid #00e0d0;
+      border-radius: 2px;
+      height: 2.375rem;
+      width: 7.375rem;
+      padding: 0 14px;
+      margin-top: 3.3125rem;
+      cursor: pointer;
+      width: 8.75rem;
+      margin: 0; }
+
+.quotes {
+  height: 31.25rem;
+  background-image: url("../images/quotesbg.png");
+  background-size: cover; }
