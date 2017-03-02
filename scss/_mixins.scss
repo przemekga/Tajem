@@ -15,6 +15,7 @@
   padding: 0 14px;
   margin-top: calculateRem(53px);
   cursor: pointer;
+  font-size: calculateRem(14px);
 }
 
 %clearfix {
@@ -108,4 +109,40 @@
   font-family: "Roboto Light";
   font-size: calculateRem($size);
   color: $color;
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin logo {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto thin";
+  color: #02dfd0;
+  margin-left: calculateRem(10px);
+
+  img {
+    margin-right: calculateRem(11px);
+  }
 }

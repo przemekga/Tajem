@@ -1,5 +1,4 @@
 header {
-  //height: 74.44vh;
   height: calculateRem(670px);
   width: 100%;
   background: url("../images/bg-slide.jpg") no-repeat center;
@@ -9,18 +8,30 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    i {
+      display: none;
+    }
+
+    @include bp(L){
+      display: block;
+
+      i {
+        display: inline-block;
+        color: #fff;
+        float: right;
+        margin-top: calculateRem(35px);
+        margin-right: calculateRem(50px);
+        font-size: calculateRem(25px);
+      }
+      .logo {
+        float: left;
+      }
+    }
   }
 
   .logo {
-    display: flex;
-    align-items: center;
-    font-family: "Roboto thin";
-    color: #02dfd0;
-    margin-left: calculateRem(10px);
-
-    img {
-      margin-right: calculateRem(11px);
-    }
+    @include logo;
   }
 
   nav {
@@ -41,7 +52,36 @@ header {
           text-transform: uppercase;
           text-decoration: none;
         }
+        @include bp(L){
+          display: block;
+          margin: 0;
+          height: calculateRem(40px);
+          line-height: calculateRem(40px);
+          border-bottom: 1px solid rgba(#fff, 0.2);
+
+          &:first-of-type {
+            border-top: 1px solid rgba(#fff, 0.2);
+          }
+        }
       }
+
+      @include bp(L){
+        padding-left: 0;
+        margin: 0;
+      }
+    }
+
+    @include bp(L){
+      float: none;
+      text-align: center;
+      margin-right: 0;
+      background-color: #322958;
+      position: absolute;
+      top: 100px;
+      z-index: 100;
+      width: 100%;
+      display: none;
+
     }
   }
 
@@ -74,6 +114,7 @@ header {
 
         button {
           @include makeButton($button-color);
+
         }
       }
     }

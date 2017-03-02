@@ -1,5 +1,74 @@
 .quotes {
-  height: calculateRem(500px);
   background-image: url("../images/quotesbg.png");
   background-size: cover;
+  background-color: #201742;
+  text-align: center;
+
+
+  .q-mark {
+    font-size: calculateRem(100px);
+    font-family: "Playfair Display Regular";
+    margin: calculateRem(70px) 0 0 0;
+    padding: 0;
+    color: #ebeaef;
+    line-height: calculateRem(50px);
+
+    @include bp(L){
+      margin-top: calculateRem(30px);
+    }
+  }
+
+  .quote {
+    color: rgba(225, 223, 230, 0.75);
+    font-family: "Playfair Display Regular";
+    font-size: calculateRem(16px);
+    margin-bottom: calculateRem(50px);
+    p {
+      margin: 0;
+    }
+  }
+
+  .q-author {
+    h4 {
+      font-family: "Roboto Black";
+      text-transform: uppercase;
+      font-size: calculateRem(14px);
+      color: #ffffff;
+      margin: 0;
+    }
+
+    p {
+      font-family: "Roboto Light";
+      font-size: calculateRem(13px);
+      color: rgba(#fff, 0.7);
+      margin: 8px 0 0 0;
+    }
+  }
+
+  .a-photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: calculateRem(40px);
+    margin-bottom: calculateRem(70px);
+
+    img {
+      margin-right: calculateRem(14px);
+
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+
+    i {
+      color: rgba(#fff, 0.7);
+      font-size: calculateRem(18px);
+      margin-right: calculateRem(31px);
+      margin-left: calculateRem(31px);
+
+      @include bp(L){
+        display: none;
+      }
+    }
+  }
 }

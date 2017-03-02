@@ -5,6 +5,10 @@
 
   .col-offset-#{$i} {
     margin-left: calc((100% / #{$columns}) * #{$i})!important;
+
+    @include bp(L) {
+      margin-left: 0!important;
+    }
   }
 }
 
@@ -14,6 +18,10 @@
   margin: 0;
   float: left;
   box-sizing: border-box;
+
+  @include bp(M){
+    min-width: 100%;
+  }
 }
 
 .row {
@@ -38,3 +46,10 @@
   @extend %clearfix;
 }
 
+html {
+  font-size: $doc-font-size-normal;
+
+  @include bp(L){
+    font-size: $doc-font-size-mobile;
+  }
+}

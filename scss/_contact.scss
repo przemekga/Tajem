@@ -1,0 +1,56 @@
+.contact {
+  padding-top: calculateRem(66px);
+  background-color: #ffffff;
+  h1 {
+    margin: 0;
+    @include heading-styling(#413d4b);
+    @include bp(L){
+      text-align: center;
+    }
+  }
+
+  form {
+    margin-top: calculateRem(31px);
+    margin-bottom: calculateRem(70px);
+
+    input {
+      width: 100%;
+      height: calculateRem(43px);
+      font-family: "Roboto Light";
+      font-size: calculateRem(14px);
+      border: 1px solid #e5e5e5;
+      margin-bottom: calculateRem(23px);
+
+      @include placeholder{
+        color: #b9b7bd;
+        padding-left: calculateRem(20px);
+      }
+    }
+
+    textarea {
+      @extend input;
+      padding: 0;
+      height: calculateRem(198px);
+      margin-bottom: 0;
+
+      @include placeholder{
+        padding-top: calculateRem(16px);
+      }
+    }
+
+    button {
+      @include makeButton(#00e0d0);
+      margin-top: calculateRem(18px);
+    }
+  }
+
+  .companies {
+    margin-bottom: calculateRem(70px);
+
+    img {
+      margin-top: calculateRem(45px);
+      width: 100%;
+      height: auto;
+    }
+  }
+}

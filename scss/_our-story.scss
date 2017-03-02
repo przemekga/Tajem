@@ -1,11 +1,11 @@
 .our-story {
   //height: 44.666666vh;
-  height: calculateRem(403px);
+  //height: calculateRem(403px);
   background-color: #ffffff;
   display: flex;
   align-items: center;
-
-
+  margin-top: calculateRem(70px);
+  margin-bottom: calculateRem(70px);
 
   .big-logo{
     text-align: center;
@@ -28,6 +28,10 @@
 
     button {
       @include makeButton($button-color);
+    }
+
+    @include bp(M){
+      text-align: center;
     }
   }
 }

@@ -1,10 +1,16 @@
 .our-works {
-  height: calc((740/900) * 100vh);
+  padding-bottom: calculateRem(70px);
+  padding-top: calculateRem(70px);
 
   .our-work-text {
-    min-height: (157px / 740px) * 100%;
+    //min-height: (157px / 740px) * 100%;
     display: flex;
     align-items: center;
+    margin-bottom: calculateRem(70px);
+
+    @include bp(M){
+      display: block;
+    }
 
     div {
       text-align: center;
@@ -16,6 +22,7 @@
       color: #413d4b;
       text-transform: uppercase;
       letter-spacing: 1px;
+      margin: 0;
     }
 
     a {
@@ -31,13 +38,11 @@
   }
 
   .thumbs {
-    max-height: (400 / 740) *100%;
-
     [class*="col-"]{
       margin: 0;
       padding: 0;
       width: calc((100% / 12) * 2);
-      margin-bottom: -4px;
+      margin-bottom: -5px;
     }
 
     img {
@@ -47,7 +52,7 @@
   }
 
   .works-btn {
-    min-height: (180 / 740) * 100%;
+    //min-height: (180 / 740) * 100%;
     display: flex;
     align-items: center;
 
@@ -59,6 +64,7 @@
       @include makeButton(#00e0d0);
       width: calculateRem(140px);
       margin: 0;
+      margin-top: calculateRem(70px)
     }
   }
 }

@@ -1,7 +1,8 @@
 .team {
-  height:calculateRem(715px);
+  //height:calculateRem(715px);
   background-image: url("../images/teambg.jpg");
   background-size: cover;
+  padding-bottom: calculateRem(70px);
 
   .team-text {
     text-align: center;
