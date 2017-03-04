@@ -4,6 +4,12 @@ header {
   background: url("../images/bg-slide.jpg") no-repeat center;
   background-size: cover;
 
+  .nav-scroll {
+    position: fixed;
+    top: 0;
+    background-color: rgba(#2F274E, 0.7);
+  }
+
   .navigation {
     display: flex;
     align-items: center;
@@ -75,10 +81,10 @@ header {
       float: none;
       text-align: center;
       margin-right: 0;
-      background-color: #322958;
+      background-color: rgba(#322958, 0.9);
       position: absolute;
       top: 100px;
-      z-index: 100;
+      z-index: 10000;
       width: 100%;
       display: none;
 
@@ -87,10 +93,11 @@ header {
 
   .slider {
     @include vertical-align(20%);
-
+    z-index: 0;
 
     .slider-track {
       text-align: center;
+
 
       .slide {
         color: #fff;

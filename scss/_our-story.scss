@@ -4,8 +4,12 @@
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  margin-top: calculateRem(70px);
-  margin-bottom: calculateRem(70px);
+
+  .container {
+    margin-top: calculateRem(70px);
+    margin-bottom: calculateRem(70px);
+  }
+
 
   .big-logo{
     text-align: center;

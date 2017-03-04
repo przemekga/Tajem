@@ -194,6 +194,10 @@ header {
   width: 100%;
   background: url("../images/bg-slide.jpg") no-repeat center;
   background-size: cover; }
+  header .nav-scroll {
+    position: fixed;
+    top: 0;
+    background-color: rgba(47, 39, 78, 0.7); }
   header .navigation {
     display: flex;
     align-items: center;
@@ -252,10 +256,10 @@ header {
         float: none;
         text-align: center;
         margin-right: 0;
-        background-color: #322958;
+        background-color: rgba(50, 41, 88, 0.9);
         position: absolute;
         top: 100px;
-        z-index: 100;
+        z-index: 10000;
         width: 100%;
         display: none; } }
   header .slider {
@@ -263,7 +267,8 @@ header {
     top: 20%;
     -webkit-transform: translateY(-20%);
     -ms-transform: translateY(-20%);
-    transform: translateY(-20%); }
+    transform: translateY(-20%);
+    z-index: 0; }
     header .slider .slider-track {
       text-align: center; }
       header .slider .slider-track .slide {
@@ -300,9 +305,10 @@ header {
 .our-story {
   background-color: #ffffff;
   display: flex;
-  align-items: center;
-  margin-top: 4.375rem;
-  margin-bottom: 4.375rem; }
+  align-items: center; }
+  .our-story .container {
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem; }
   .our-story .big-logo {
     text-align: center; }
   .our-story .our-story-article h3 {

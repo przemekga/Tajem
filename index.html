@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/jquery.combinedScroll.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/dropdown.js"></script>
+    <script src="js/nav.js"></script>
     <!--<script src="js/carousel.js"></script>-->
 
 </head>
 <body>
-<header>
-    <div class="container-fluid">
+<header id="top">
+    <div class="container-fluid nav-scroll" id="navbar">
         <div class="container navigation">
             <div class="logo">
                 <img src="./images/Vector-Smart-Object1.png" alt="">
@@ -25,13 +27,13 @@
             <i class="fa fa-bars" id="dropdown" aria-hidden="true"></i>
             <nav>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Expertise</a></li>
-                    <li><a href="">Teams</a></li>
-                    <li><a href="">Works</a></li>
-                    <li><a href="">People Say</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#our-story">About</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#team">Teams</a></li>
+                    <li><a href="#our-works">Works</a></li>
+                    <li><a href="#quotes">People Say</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -51,7 +53,7 @@
         </div>
     </div>
 </header>
-<section class="container-fluid our-story">
+<section class="container-fluid our-story" id="our-story">
     <div class="container">
         <div class="row">
             <div class="col-5 big-logo">
@@ -66,13 +68,13 @@
         </div>
     </div>
 </section>
-<section class="container-fluid video">
+<section class="container-fluid video" id="video">
     <a href="" class="video-link">
         <img src="./images/Play-Icon.png" alt="">
         <h4>Watch our story</h4>
     </a>
 </section>
-<section class="container-fluid expertise">
+<section class="container-fluid expertise" id="expertise">
     <div class="container">
         <div class="row">
             <div class="col-12 expertise-text">
@@ -95,7 +97,7 @@
         </div>
     </div>
 </section>
-<section class="container-fluid team">
+<section class="container-fluid team" id="team">
     <div class="container">
         <div class="row">
             <div class="col-12 team-text">
@@ -150,7 +152,7 @@
         </div>
     </div>
 </section>
-<section class="container-fluid our-works">
+<section class="container-fluid our-works" id="our-works">
     <div class="row our-work-text">
         <div class="col-6">
             <h1>our works</h1>
@@ -180,7 +182,7 @@
         </div>
     </div>
 </section>
-<section class="container-fluid quotes">
+<section class="container-fluid quotes" id="quotes">
     <div class="container">
         <div class="row">
             <div class="col-12 q-mark"><span>“</span></div>
@@ -205,7 +207,7 @@
         </div>
     </div>
 </section>
-<section class="container-fluid contact">
+<section class="container-fluid contact" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-6">
